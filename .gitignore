@@ -1,3 +1,7 @@
+# From Me
+*.csv
+
+# ----------------------------- From Electron Forge -----------------------------
 # Logs
 logs
 *.log
