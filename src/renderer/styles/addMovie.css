@@ -1,0 +1,120 @@
+/* Combined Pastel Light-Grey Theme + Form Styles */
+
+/* Color variables */
+:root {
+    --bg: #5a5b68;             /* dark grey background */
+    --text: #000;              /* black text */
+    --btn: #b8e6b8;            /* light green button */
+    --btn-hover: #b8d8f0;      /* light blue button hover */
+    --btn-text: #000;          /* button text black */
+  }
+  
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, sans-serif;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* keep some spacing on smaller screens */
+  }
+  
+  /* Container wrapper for the form */
+  form#addMovieForm {
+    background: #70727d; 
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    color: #000;
+    text-align: left;
+  }
+  
+  form#addMovieForm h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--text);
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] {
+    margin-top: 6px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="date"]:focus {
+    border-color: #0078d4;
+    outline: none;
+  }
+  
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+
+    button[type="submit"] {
+        margin-top: 25px;
+        width: 100%;
+        padding: 12px 0;
+        background-color: var(--btn);
+        color: var(--btn-text);
+        font-weight: 700;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.25s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: var(--btn-hover);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        form#addMovieForm {
+            padding: 20px;
+        }
+        label {
+            font-size: 0.9rem;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            font-size: 0.9rem;
+        }
+        button[type="submit"] {
+            font-size: 1rem;
+        }
+}  

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>WetMovies</title>
+    <link rel="stylesheet" href="../styles/addMovie.css" />
+</head>
+<body>
+    <form id="addMovieForm">
+    <h2>Add a Movie</h2>
+
+    <label>Movie Title:
+        <input type="text" name="movie" required />
+    </label>
+
+    <label>Overall Gut Ranking (OGR):
+        <input type="number" name="ogr" step="1" min="0" max="10" required />
+    </label>
+
+    <label>Re-watchability:
+        <select name="rewatchability" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="never">Never</option>
+            <option value="today">Today</option>
+            <option value="3months">In 3 months</option>
+            <option value="nextyear">Next year</option>
+        </select>
+    </label>
+
+    <label>First Watch Shock:
+        <select name="firstWatchShock" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="none">None</option>
+            <option value="some">Some</option>
+            <option value="nuts">That was nuts</option>
+            <option value="doubleNuts">That was fucking crazy nuts</option>
+        </select>
+    </label>
+
+    <label>Impact on Life:
+        <select name="impactOnLife" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="none">None</option>
+            <option value="some">Some</option>
+            <option value="sometimes">I think about it sometimes</option>
+            <option value="daily">I think about it daily</option>
+        </select>
+    </label>
+
+    <label>Cinematography / Visuals:
+      <input type="number" name="cinematography" min="0" max="10" required />
+    </label>
+
+    <label>Soundtrack:
+      <input type="number" name="soundtrack" min="0" max="10" required />
+    </label>
+
+    <label>Philosophical Depth:
+      <input type="number" name="philosophicalDepth" min="0" max="10" required />
+    </label>
+
+    <label>Genre Execution:
+      <input type="number" name="genreExecution" min="0" max="10" required />
+    </label>
+
+    <label>Multi-Genre Bonus Points:
+      <input type="number" name="multiGenreBonusPoints" min="0" max="10" required />
+    </label>
+
+    <label>Ahead of Its Time Ranking:
+      <input type="number" name="aheadOfItsTimeRanking" min="0" max="10" required />
+    </label>
+
+    <label>Villain Strength:
+      <input type="number" name="villainStrength" min="0" max="10" required />
+    </label>
+
+    <label>Hero Strength:
+      <input type="number" name="heroStrength" min="0" max="10" required />
+    </label>
+
+    <label>World Building:
+      <input type="number" name="worldBuilding" min="0" max="10" required />
+    </label>
+
+    <label>Character Development:
+      <input type="number" name="characterDevelopment" min="0" max="10" required />
+    </label>
+
+    <label>Ending Satisfaction:
+      <input type="number" name="endingSatisfaction" min="0" max="10" required />
+    </label>
+
+    <label>Pace of the Movie:
+      <input type="number" name="paceOfTheMovie" min="0" max="10" required />
+    </label>
+
+    <label>Emotional Impact:
+      <input type="number" name="emotionalImpact" min="0" max="10" required />
+    </label>
+
+    <label>Importance of Not Knowing:
+      <input type="number" name="importanceOfNotKnowing" min="0" max="10" required />
+    </label>
+
+    <label>Nostalgic Factor:
+      <input type="number" name="nostalgicFactor" min="0" max="10" required />
+    </label>
+
+    <label>Hype Factor:
+      <input type="number" name="hypeFactor" min="0" max="10" required />
+    </label>
+
+    <label>Year:
+      <input type="number" name="year" min="1888" max="2100" required />
+    </label>
+
+    <label>Duration (minutes):
+      <input type="number" name="duration" min="1" required />
+    </label>
+
+    <label>Date Watched:
+      <input type="date" name="dateWatched" required />
+    </label>
+
+    <label>True Story:
+      <input type="checkbox" name="trueStory" />
+    </label>
+
+    <label>IMDB Rating:
+      <input type="number" name="imdbRating" step="0.1" min="0" max="10" required />
+    </label>
+
+    <label>Rotten Tomatoes Rating:
+      <input type="text" name="rottenTomatoesRating" pattern="^\d+%$" placeholder="e.g. 85%" required />
+    </label>
+
+    <label>Popcorn Score:
+      <input type="text" name="popcornScore" pattern="^\d+%$" placeholder="e.g. 92%" required />
+    </label>
+
+    <label>Age Rating:
+      <input type="text" name="ageRating" required />
+    </label>
+
+    <label>Genres:
+      <input type="text" name="genres" required placeholder="Comma or semicolon separated" />
+    </label>
+
+    <button type="submit">Add Movie</button>
+  </form>
+</body>
+</html>
