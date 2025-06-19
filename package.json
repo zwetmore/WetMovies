@@ -3,7 +3,7 @@
   "productName": "wetmovies",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": "src/main/index.js",
+  "main": "src/renderer/js/main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",

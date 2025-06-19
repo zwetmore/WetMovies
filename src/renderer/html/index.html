@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <title>WetMovies</title>
     <link rel="stylesheet" href="../styles/index.css" />
   </head>
   <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
+    <main class="container">
+      <h1 class="title">WetMovies</h1>
+
+      <blockquote id="quote" class="quote">
+        <!-- Quote will be inserted here -->
+      </blockquote>
+
+      <div class="btn-group">
+        <button id="viewBtn" class="btn">View Movies</button>
+        <button id="addBtn" class="btn">Add a Movie</button>
+      </div>
+    </main>
+    <script src="../js/index.js"></script>
   </body>
 </html>
