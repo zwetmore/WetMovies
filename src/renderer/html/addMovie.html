@@ -253,9 +253,36 @@
     </fieldset>
 
     <div class="form-actions">
-      <button type="submit" class="primary">Add Movie</button>
-      <button type="button" class="secondary" onclick="window.location.href='index.html'">Cancel</button>
+        <button type="submit" class="primary">Add Movie</button>
+        <button type="button" class="secondary" onclick="window.location.href='index.html'">Cancel</button>
+        <button type="button" id="debugFill" class="secondary">Debug Fill</button>
     </div>
+
+    <script>
+    document.getElementById('debugFill').addEventListener('click', () => {
+        const form = document.getElementById('addMovieForm');
+        
+        for (const element of form.elements) {
+        if (element.tagName === 'INPUT') {
+            if (element.type === 'checkbox') {
+            element.checked = true;  // check all checkboxes
+            } else if (element.type === 'text' || element.type === 'number' || element.type === 'date') {
+            element.value = '10';
+            }
+        } else if (element.tagName === 'SELECT') {
+            // Try to select the option with value "10" if it exists
+            let optionToSelect = Array.from(element.options).find(opt => opt.value === '10');
+            if (optionToSelect) {
+            element.value = '10';
+            } else {
+            // If no "10", select first non-disabled option
+            let firstOption = Array.from(element.options).find(opt => !opt.disabled);
+            if (firstOption) element.value = firstOption.value;
+            }
+        }
+        }
+    });
+    </script>
   </form>
 </body>
 </html>
