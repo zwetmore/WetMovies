@@ -27,6 +27,7 @@ body {
   text-align: center;
   max-width: 600px;
   padding: 2rem;
+  position: relative;
 }
 
 .title {
@@ -34,11 +35,31 @@ body {
   margin-bottom: 1rem;
 }
 
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
 .quote {
   font-style: italic;
   margin: 1.5rem 0 2.5rem;
   line-height: 1.4;
+
+  color: #FFD700; 
+  font-family: 'Press Start 2P', monospace;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.07em;
+
+  animation: pulseScale 2s ease-in-out infinite;
+  transform-origin: center;
 }
+
+
 
 .btn-group {
   display: flex;
