@@ -58,5 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     alert("Movie added successfully!");
     form.reset();
+    window.location.href = "../html/viewMovies.html";
   });
 });
