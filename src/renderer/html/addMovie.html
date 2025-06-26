@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="../styles/addMovie.css" />
 </head>
 <body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-bar">
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='viewMovies.html'">View Movies</button>
+    </nav>
+
     <form id="addMovieForm">
     <h2>Add a Movie</h2>
 
@@ -48,51 +54,91 @@
     </label>
 
     <label>Cinematography / Visuals:
-      <input type="number" name="cinematography" min="0" max="10" required />
+        <select name="cinematography" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="bad">Bad</option>
+            <option value="average">Average</option>
+            <option value="good">Good</option>
+            <option value="s_tier">S-Tier</option>
+        </select>
     </label>
 
     <label>Soundtrack:
-      <input type="number" name="soundtrack" min="0" max="10" required />
+        <select name="soundtrack" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="bad">Bad</option>
+            <option value="average">Average</option>
+            <option value="good">Good</option>
+            <option value="s_tier">S-Tier</option>
+        </select>
     </label>
 
     <label>Philosophical Depth:
-      <input type="number" name="philosophicalDepth" min="0" max="10" required />
-    </label>
-
-    <label>Genre Execution:
-      <input type="number" name="genreExecution" min="0" max="10" required />
-    </label>
-
-    <label>Multi-Genre Bonus Points:
-      <input type="number" name="multiGenreBonusPoints" min="0" max="10" required />
-    </label>
-
-    <label>Ahead of Its Time Ranking:
-      <input type="number" name="aheadOfItsTimeRanking" min="0" max="10" required />
+        <select name="philosophicalDepth" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="none">None</option>
+            <option value="some">Some</option>
+            <option value="a_lot">A Lot</option>
+        </select>
     </label>
 
     <label>Villain Strength:
-      <input type="number" name="villainStrength" min="0" max="10" required />
+        <select name="villainStrength" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="poor">Poor</option>
+            <option value="average">Average</option>
+            <option value="good">Good</option>
+            <option value="great">Great</option>
+        </select>
     </label>
-
+    
     <label>Hero Strength:
-      <input type="number" name="heroStrength" min="0" max="10" required />
+        <select name="heroStrength" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="poor">Poor</option>
+            <option value="average">Average</option>
+            <option value="good">Good</option>
+            <option value="great">Great</option>
+        </select>
     </label>
-
+    
     <label>World Building:
-      <input type="number" name="worldBuilding" min="0" max="10" required />
+        <select name="worldBuilding" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="poor">Poor</option>
+            <option value="average">Average</option>
+            <option value="good">Good</option>
+            <option value="great">Great</option>
+        </select>
     </label>
 
     <label>Character Development:
-      <input type="number" name="characterDevelopment" min="0" max="10" required />
+        <select name="characterDevelopment" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="poor">Poor</option>
+            <option value="average">Average</option>
+            <option value="good">Good</option>
+            <option value="great">Great</option>
+        </select>
     </label>
-
+    
     <label>Ending Satisfaction:
-      <input type="number" name="endingSatisfaction" min="0" max="10" required />
+        <select name="endingSatisfaction" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="poor">Poor</option>
+            <option value="average">Average</option>
+            <option value="good">Good</option>
+            <option value="great">Great</option>
+        </select>
     </label>
 
     <label>Pace of the Movie:
-      <input type="number" name="paceOfTheMovie" min="0" max="10" required />
+        <select name="paceOfTheMovie" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="slow">Slow</option>
+            <option value="normal">Normal</option>
+            <option value="fast">Fast</option>
+        </select>
     </label>
 
     <label>Emotional Impact:
@@ -147,7 +193,10 @@
       <input type="text" name="genres" required placeholder="Comma or semicolon separated" />
     </label>
 
-    <button type="submit">Add Movie</button>
-  </form>
+    <div class="form-actions">
+        <button type="submit" class="primary">Add Movie</button>
+        <button type="button" onclick="window.location.href='index.html'" class="secondary">Cancel</button>
+    </div>
+</form>
 </body>
 </html>

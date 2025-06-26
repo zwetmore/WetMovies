@@ -1,120 +1,151 @@
-/* Combined Pastel Light-Grey Theme + Form Styles */
-
-/* Color variables */
 :root {
-    --bg: #5a5b68;             /* dark grey background */
-    --text: #000;              /* black text */
-    --btn: #b8e6b8;            /* light green button */
-    --btn-hover: #b8d8f0;      /* light blue button hover */
-    --btn-text: #000;          /* button text black */
+    --bg: #6a6b78; /* slightly lighter than #5a5b68 */
+    --text: #000;
+    --input-bg: #fff;
+    --border: #ccc;
+    --btn-bg: #b8e6b8;
+    --btn-hover: #a0d4a0;
+    --btn-text: #000;
+    --cancel-bg: #f0c0c0;
+    --cancel-hover: #e5aaaa;
   }
   
-  /* Reset and base */
+  /* General Reset */
   * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     font-family: "Segoe UI", Roboto, sans-serif;
   }
   
   body {
-    background: var(--bg);
+    background-color: var(--bg);
     color: var(--text);
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; /* keep some spacing on smaller screens */
-  }
-  
-  /* Container wrapper for the form */
-  form#addMovieForm {
-    background: #70727d; 
-    max-width: 700px;
-    width: 100%;
-    padding: 25px 30px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    color: #000;
-    text-align: left;
-  }
-  
-  form#addMovieForm h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: var(--text);
-  }
-  
-  label {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 0.95rem;
-    color: var(--text);
+    align-items: center;
+    padding-top: 80px; /* offset for fixed nav */
   }
   
-  input[type="text"],
-  input[type="number"],
-  input[type="date"] {
-    margin-top: 6px;
-    padding: 8px 12px;
-    font-size: 1rem;
-    border: 1.5px solid #ccc;
-    border-radius: 4px;
-    transition: border-color 0.3s ease;
-    font-family: inherit;
+  .top-bar {
+    width: 100%;
+    background-color: #3e3f4b;
+    display: flex;
+    gap: 2rem;
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
   }
   
-  input[type="text"]:focus,
-  input[type="number"]:focus,
-  input[type="date"]:focus {
-    border-color: #0078d4;
-    outline: none;
-  }
-  
-  input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    margin-top: 10px;
+  .top-bar button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
     cursor: pointer;
-    align-self: flex-start;
+    padding: 6px 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
   }
-
-    button[type="submit"] {
-        margin-top: 25px;
-        width: 100%;
-        padding: 12px 0;
-        background-color: var(--btn);
-        color: var(--btn-text);
-        font-weight: 700;
-        font-size: 1.1rem;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background-color 0.25s ease;
-    }
-
-    button[type="submit"]:hover {
-        background-color: var(--btn-hover);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-        form#addMovieForm {
-            padding: 20px;
-        }
-        label {
-            font-size: 0.9rem;
-        }
-        input[type="text"],
-        input[type="number"],
-        input[type="date"] {
-            font-size: 0.9rem;
-        }
-        button[type="submit"] {
-            font-size: 1rem;
-        }
-}  
+  
+  .top-bar button:hover {
+    border-bottom: 2px solid #b8d8f0;
+    color: #b8d8f0;
+  }
+  
+  
+  /* Form Container */
+  form#addMovieForm {
+    background-color: #f3f3f3;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Heading */
+  form#addMovieForm h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  /* Label/Input Row Layout */
+  form#addMovieForm label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+    font-weight: 600;
+    gap: 1rem;
+  }
+  
+  form#addMovieForm label:last-of-type {
+    border-bottom: none;
+  }
+  
+  /* Inputs and Selects */
+  form#addMovieForm input,
+  form#addMovieForm select {
+    width: 55%;
+    padding: 8px 10px;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+  }
+  
+  /* Checkbox tweak */
+  form#addMovieForm input[type="checkbox"] {
+    width: auto;
+    margin-left: 1rem;
+  }
+  
+  /* Bottom Buttons */
+  .form-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .form-actions .primary {
+    flex: 2; /* Make Submit take up more space */
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 14px 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .form-actions .primary:hover {
+    background-color: var(--btn-hover);
+  }
+  
+  .form-actions .secondary {
+    flex: 1; /* Make Cancel take up less space */
+    background-color: var(--cancel-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 14px 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .form-actions .secondary:hover {
+    background-color: var(--cancel-hover);
+  }
+  
